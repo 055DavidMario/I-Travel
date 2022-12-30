@@ -1,0 +1,51 @@
+Step 1
+ENTITAS
+Wisata (lokal)
+Harga
+Transportasi
+Tiket
+Transaksi
+Keranjang
+User(otomatis)
+
+
+Step 2
+ATRIBUT
+Wisata = {ID, ID Transportasi, Nama Wisata, Lokasi, Deskripsi, Gambar, Rating, Kategori Wisata}; CRUD admin
+Harga = {ID, Harga, Promo};
+Transportasi = {ID, Nama Transportasi, Merk};
+Tiket = {ID, ID Transportasi, ID Harga, Nama Destinasi,Tanggal Tiket, Waktu Perjalanan, Transit, Makan} CRUD admin
+Transaksi = {ID Tiket, ID User, Nama Penumpang, Jumlah Penumpang,No HP, No Bayar, Total Harga, QR, Tanggal Transaksi} -- Read Delete user
+User = {ID, Nama User, dll}
+
+Step 3 
+KARDINALITAS / RELASI
+Wisata hasOne Transportasi
+Wisata hasMany Tiket
+Tiket hasOne Wisata
+Tiket hasOne Transportasi
+Harga hasMany Tiket
+Tiket hasOne Harga
+Transaksi hasMany Tiket
+Transaksi hasOne User
+User hasMany Transaksi
+
+DEADLINE
+SENIN 19 Des 22:
+Frontpage : page awal -> page home -> page contact us -> page about us (DAVID)
+		page Tiket -> page Tiket 2 -> page Transaksi Tiket -> page Keranjang -> Tiket Akhir (RAMA)
+		page Wisata -> page info wisata1 -> page info wisata2 -> page info wisata3 (APRIL)
+		
+Backpage  : Home admin (DAVID)
+		Input Data Wisata (view)
+		Form insert data (insert)
+		Form edit data (edit)
+		
+		Input Data Tiket (view)
+		Form insert Tiket (insert)
+		Form edit Tiket (edit)
+
+join table untuk get foreignkey data
+(Login)
+backpage user dan admin 
+2 controller
